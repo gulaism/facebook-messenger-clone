@@ -22,7 +22,7 @@ const Users = [
     {
         profilePhoto: 'hugh',
         name: 'Callie Goodman',
-        lastMessage: 'You: Call me today. We have a new project.'
+        lastMessage: 'Call me today. We have a new project.'
     }
 ]
 

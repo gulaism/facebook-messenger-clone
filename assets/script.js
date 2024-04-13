@@ -67,6 +67,8 @@ class showUser {
                     <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">${this.lastMessage}</div>
                 </div>
 
+                
+
             </div>
         </div>
         <div class="mt-[6px]">
@@ -150,6 +152,7 @@ function selectConversation() {
             let show = "show"
             let [msgId, convoId] = newUser.displayConvo(i, show)
             const msgInput = document.querySelector(`#${msgId}`)
+            const convoID = document.querySelector(`#${convoId}`)
             msgInput.addEventListener('keyup', (e) => {
                 if(e.keyCode === 13) {
                     console.log(msgInput.value)
@@ -160,7 +163,8 @@ function selectConversation() {
                         <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">${msgInput.value}</div>
                     </div>
                     `
-                    convoId.innerHTML = html
+                    convoID.innerHTML += html
+                    msgInput.value = ''
                 }
             })
 
