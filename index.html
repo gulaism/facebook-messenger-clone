@@ -23,6 +23,7 @@
 
 <body class="font-openSans h-[1024px] overflow-scroll">
     <div class="container flex items-top">
+
         <div class="m-[45px] w-[205px]">
             <div class="mb-[65px] size-[60px] relative">
                 <img class="object-cover" src="./assets/images/Facebook Messenger Logo.svg" alt="">
@@ -77,8 +78,8 @@
                     class="outline-none w-full h-[53px] bg-[#E2E2E2] text-[#696969] font-bold text-[16px] leading-[22px] rounded-[30px] py-[14px] pl-[60px] pr-[20px]"
                     placeholder="Search messenger...">
             </div>
-            <div class="flex flex-col gap-[28px]">
-                <div class="bg-[#476CFF] h-[75px] w-full rounded-[100px] flex items-center space-x-[15px]">
+            <div id="usersContainer" class="flex flex-col gap-[28px] w-[472px]">
+                <!-- <div class="bg-[#476CFF] h-[75px] w-full rounded-[100px] flex items-center space-x-[15px]">
                     <div class="size-[75px] rounded-full"><img class="size-full rounded-full object-cover"
                             src="./assets/images/spngebob.jpg" alt=""></div>
                     <div class="font-bold">
@@ -127,10 +128,11 @@
                             class="text-[rgba(105,105,105,1)] text-[11px] leading-[15px] whitespace-nowrap overflow-hidden max-w-[266px]">
                             You: Call me today. We have a new project.</div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div class="mt-[40px] mx-[30px] w-full">
+        <div id="userConvoSide">
+            <!-- <div id="convo0" class="hidden mt-[40px] mx-[30px] w-full">
             <div class="flex items-center justify-between w-full mb-[6px]">
                 <div class="flex space-x-[30px] items-center">
                     <div class="size-[70px] whitespace-nowrap flex shrink-0"><img class="size-full rounded-full object-cover"
@@ -168,9 +170,171 @@
                     class="outline-none placeholder:text-[rgba(33,33,33,0.85)] w-full h-[53px] bg-[#E2E2E2] text-[rgba(33,33,33,0.85)] font-bold text-[16px] leading-[22px] rounded-[30px] py-[14px] px-[20px]"
                     placeholder="Message">
             </div>
+            </div> -->
         </div>
+        
+        <!-- <div id="convo1" class="hidden mt-[40px] mx-[30px] w-full">
+            <div class="flex items-center justify-between w-full mb-[6px]">
+                <div class="flex space-x-[30px] items-center">
+                    <div class="size-[70px] whitespace-nowrap flex shrink-0"><img class="size-full rounded-full object-cover"
+                            src="./assets/images/rihanna.jpg" alt=""></div>
+                    <div class="text-[#212121] font-bold text-[32px] leading-[44px]">Rihanna Goldberg</div>
+                </div>
+                <div class="size-[27px]"><img class="size-full" src="./assets/images/video.svg" alt=""></div>
+            </div>
+            <div class="h-[830px] overflow-y-auto text-[16px] font-bold leading-[22px] text-white flex">
+                
+                <div class="self-end max-h-full w-full">
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hi, Mrs. Lilly</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hey</div>
+                    </div>
+    
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px] whitespace-nowrap flex shrink-0"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hello. Mrs. Lilly, i have a good idea how to create a music with help of our team. Can we meet up tomorrow near the bar to talk?</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Great. Thanks!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[6px]">
+                <input id="searchMessenger" type="text"
+                    class="outline-none placeholder:text-[rgba(33,33,33,0.85)] w-full h-[53px] bg-[#E2E2E2] text-[rgba(33,33,33,0.85)] font-bold text-[16px] leading-[22px] rounded-[30px] py-[14px] px-[20px]"
+                    placeholder="Message">
+            </div>
+        </div>
+        <div id="convo2" class="hidden mt-[40px] mx-[30px] w-full">
+            <div class="flex items-center justify-between w-full mb-[6px]">
+                <div class="flex space-x-[30px] items-center">
+                    <div class="size-[70px] whitespace-nowrap flex shrink-0"><img class="size-full rounded-full object-cover"
+                            src="./assets/images/Ryan-Gosling-07.jpg" alt=""></div>
+                    <div class="text-[#212121] font-bold text-[32px] leading-[44px]">Gregory Portman</div>
+                </div>
+                <div class="size-[27px]"><img class="size-full" src="./assets/images/video.svg" alt=""></div>
+            </div>
+            <div class="h-[830px] overflow-y-auto text-[16px] font-bold leading-[22px] text-white flex">
+                
+                <div class="self-end max-h-full w-full">
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hi, Mrs. Lilly</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hey</div>
+                    </div>
+    
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px] whitespace-nowrap flex shrink-0"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hello. Mrs. Lilly, i have a good idea how to create a music with help of our team. Can we meet up tomorrow near the bar to talk?</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">This is so good man. Will do Remix.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[6px]">
+                <input id="searchMessenger" type="text"
+                    class="outline-none placeholder:text-[rgba(33,33,33,0.85)] w-full h-[53px] bg-[#E2E2E2] text-[rgba(33,33,33,0.85)] font-bold text-[16px] leading-[22px] rounded-[30px] py-[14px] px-[20px]"
+                    placeholder="Message">
+            </div>
+        </div>
+        <div id="convo3" class="hidden mt-[40px] mx-[30px] w-full">
+            <div class="flex items-center justify-between w-full mb-[6px]">
+                <div class="flex space-x-[30px] items-center">
+                    <div class="size-[70px] whitespace-nowrap flex shrink-0"><img class="size-full rounded-full object-cover"
+                            src="./assets/images/elon.jpg" alt=""></div>
+                    <div class="text-[#212121] font-bold text-[32px] leading-[44px]">Marry Adams</div>
+                </div>
+                <div class="size-[27px]"><img class="size-full" src="./assets/images/video.svg" alt=""></div>
+            </div>
+            <div class="h-[830px] overflow-y-auto text-[16px] font-bold leading-[22px] text-white flex">
+                
+                <div class="self-end max-h-full w-full">
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hi, Mrs. Lilly</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hey</div>
+                    </div>
+    
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px] whitespace-nowrap flex shrink-0"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hello. Mrs. Lilly, i have a good idea how to create a music with help of our team. Can we meet up tomorrow near the bar to talk?</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Cool. We can help Lilly.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[6px]">
+                <input id="searchMessenger" type="text"
+                    class="outline-none placeholder:text-[rgba(33,33,33,0.85)] w-full h-[53px] bg-[#E2E2E2] text-[rgba(33,33,33,0.85)] font-bold text-[16px] leading-[22px] rounded-[30px] py-[14px] px-[20px]"
+                    placeholder="Message">
+            </div>
+        </div>
+        <div id="convo4" class="hidden mt-[40px] mx-[30px] w-full">
+            <div class="flex items-center justify-between w-full mb-[6px]">
+                <div class="flex space-x-[30px] items-center">
+                    <div class="size-[70px] whitespace-nowrap flex shrink-0"><img class="size-full rounded-full object-cover"
+                            src="./assets/images/hugh" alt=""></div>
+                    <div class="text-[#212121] font-bold text-[32px] leading-[44px]">Callie Goodman</div>
+                </div>
+                <div class="size-[27px]"><img class="size-full" src="./assets/images/video.svg" alt=""></div>
+            </div>
+            <div class="h-[830px] overflow-y-auto text-[16px] font-bold leading-[22px] text-white flex">
+                
+                <div class="self-end max-h-full w-full">
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hi, Mrs. Lilly</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hey</div>
+                    </div>
+    
+                    <div class="flex gap-[15px] mb-[10px] flex-row-reverse">
+                        <div class="size-[50px] whitespace-nowrap flex shrink-0"><img class="rounded-full object-cover size-full" src="./assets/images/pp.jpg" alt=""></div>
+                        <div class="bg-[#476CFF] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Hello. Mrs. Lilly, i have a good idea how to create a music with help of our team. Can we meet up tomorrow near the bar to talk?</div>
+                    </div>
+    
+                    <div class="flex space-x-[15px] mb-[10px]">
+                        <div class="size-[50px]"><img class="rounded-full object-cover size-full" src="./assets/images/spngebob.jpg" alt=""></div>
+                        <div class="bg-[#696969] rounded-[30px] max-w-[450px] py-[11px] px-[18px]">Call me today. We have a new project.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[6px]">
+                <input id="searchMessenger" type="text"
+                    class="outline-none placeholder:text-[rgba(33,33,33,0.85)] w-full h-[53px] bg-[#E2E2E2] text-[rgba(33,33,33,0.85)] font-bold text-[16px] leading-[22px] rounded-[30px] py-[14px] px-[20px]"
+                    placeholder="Message">
+            </div>
+        </div> -->
+
     </div>
 
+
+
+    <script src="./assets/users.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
